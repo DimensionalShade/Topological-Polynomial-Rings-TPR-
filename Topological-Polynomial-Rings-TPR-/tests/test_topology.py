@@ -1,0 +1,1 @@
+from tpr_sim.topology import TopologicalStructure\n\ndef test_is_connected():\n    t1 = TopologicalStructure([0, 1, 1, 0])\n    assert t1.is_connected() == True\n\n    t2 = TopologicalStructure([1, 0, 0, 1])\n    assert t2.is_connected() == False\n\ndef test_support():\n    t = TopologicalStructure([0, 2, 0, 3])\n    assert t.support() == [1, 3]\n

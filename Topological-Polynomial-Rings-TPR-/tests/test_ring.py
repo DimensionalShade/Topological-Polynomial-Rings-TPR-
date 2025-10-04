@@ -1,0 +1,1 @@
+from tpr_sim.ring import PolynomialRing\n\ndef test_addition():\n    p1 = PolynomialRing([1, 2, 0])\n    p2 = PolynomialRing([0, 3, 4])\n    result = p1.add(p2)\n    assert result.coefficients == [1, 5, 4]\n\ndef test_str():\n    p = PolynomialRing([0, 1, 0, 2])\n    assert str(p) == '1x^1 + 2x^3'\n
