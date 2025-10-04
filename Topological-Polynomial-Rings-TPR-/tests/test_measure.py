@@ -1,0 +1,1 @@
+from tpr_sim.measure import PolynomialMeasure\n\ndef test_norm():\n    m = PolynomialMeasure([1, -2, 3])\n    assert m.norm() == 6\n\ndef test_fixate():\n    m = PolynomialMeasure([4, 0, 5])\n    assert m.fixate() == (4, 0, 5)\n\ndef test_cli_repr():\n    m = PolynomialMeasure([0, 2, 0, 3])\n    assert m.cli_repr() == '2x^1 + 3x^3'\n
